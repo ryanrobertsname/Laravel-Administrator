@@ -60,5 +60,5 @@
             "if [ -f \"overrides/packages/ryanrobertsname/roxy-fileman-laravel/config.php\" ] \nthen \ncp overrides/packages/ryanrobertsname/roxy-fileman-laravel/config.php vendor/ryanrobertsname/roxy-fileman-laravel/src/config/config.php  \nfi"
         ]
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
