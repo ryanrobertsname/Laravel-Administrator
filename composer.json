@@ -8,6 +8,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/ryanrobertsname/roxy-fileman-laravel.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ryanrobertsname/ckeditor-youtube-plugin.git"
         }
     ],
     "authors": [
@@ -22,8 +26,9 @@
     "require": {
         "php": ">=5.3.0",
         "laravel/framework": "4.*",
-        "ckeditor/ckeditor": "4.*",
-        "ryanrobertsname/roxy-fileman-laravel": "1.*"
+        "ckeditor/ckeditor": "4.3.3",
+        "ryanrobertsname/ckeditor-youtube-plugin": "1.0",
+        "ryanrobertsname/roxy-fileman-laravel": "1.0"
     },
     "require-dev": {
         "mockery/mockery": "~0.9"
@@ -42,23 +47,13 @@
             "if [ -d \"vendor/ckeditor/ckeditor/\" ] \nthen \nmv vendor/ckeditor/ckeditor/ public/js/  \nfi",
             "if [ -d \"vendor/ckeditor/\" ] \nthen \nrm -R vendor/ckeditor/ \nfi",
 
-            "if [ -f \"public/js/ckeditor/config.js\" ] \nthen \nrm -R public/js/ckeditor/config.js \nfi ",
-            "if [ -f \"overrides/packages/ckeditor/ckeditor/config.js\" ] \nthen \ncp overrides/packages/ckeditor/ckeditor/config.js public/js/ckeditor/config.js  \nfi",
-
-            "if [ -f \"vendor/ryanrobertsname/roxy-fileman-laravel/src/config/config.php\" ] \nthen \nrm -R vendor/ryanrobertsname/roxy-fileman-laravel/src/config/config.php \nfi ",
-            "if [ -f \"overrides/packages/ryanrobertsname/roxy-fileman-laravel/config.php\" ] \nthen \ncp overrides/packages/ryanrobertsname/roxy-fileman-laravel/config.php vendor/ryanrobertsname/roxy-fileman-laravel/src/config/config.php  \nfi"
-        ],
-        "post-install-cmd": [
-            "if [ -d \"public/js/ckeditor/\" ] \nthen \nrm -R public/js/ckeditor/ \nfi ",
-            "if [ -d \"vendor/ckeditor/ckeditor/\" ] \nthen \nmv vendor/ckeditor/ckeditor/ public/js/  \nfi",
-            "if [ -d \"vendor/ckeditor/\" ] \nthen \nrm -R vendor/ckeditor/ \nfi",
+            "if [ -d \"public/js/ckeditor/plugins/youtube\" ] \nthen \nrm -R public/js/ckeditor/plugins/youtube \nfi ",
+            "if [ -d \"vendor/ryanrobertsname/ckeditor-youtube-plugin/\" ] \nthen \nmv vendor/ryanrobertsname/ckeditor-youtube-plugin/ public/js/ckeditor/plugins/  \nfi",
+            "if [ -d \"vendor/ryanrobertsname/ckeditor-youtube-plugin/\" ] \nthen \nrm -R vendor/ryanrobertsname/ckeditor-youtube-plugin/ \nfi",
 
             "if [ -f \"public/js/ckeditor/config.js\" ] \nthen \nrm -R public/js/ckeditor/config.js \nfi ",
-            "if [ -f \"overrides/packages/ckeditor/ckeditor/config.js\" ] \nthen \ncp overrides/packages/ckeditor/ckeditor/config.js public/js/ckeditor/config.js  \nfi",
-
-            "if [ -f \"vendor/ryanrobertsname/roxy-fileman-laravel/src/config/config.php\" ] \nthen \nrm -R vendor/ryanrobertsname/roxy-fileman-laravel/src/config/config.php \nfi ",
-            "if [ -f \"overrides/packages/ryanrobertsname/roxy-fileman-laravel/config.php\" ] \nthen \ncp overrides/packages/ryanrobertsname/roxy-fileman-laravel/config.php vendor/ryanrobertsname/roxy-fileman-laravel/src/config/config.php  \nfi"
+            "if [ -f \"overrides/packages/ckeditor/ckeditor/config.js\" ] \nthen \ncp overrides/packages/ckeditor/ckeditor/config.js public/js/ckeditor/config.js  \nfi"
         ]
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
