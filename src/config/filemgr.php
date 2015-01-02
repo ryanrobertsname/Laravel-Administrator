@@ -4,7 +4,7 @@ return array(
 
 	'uri' => 'fileman',
 
-	'assets_uri' => '/packages/ryanrobertsname/roxy-fileman-laravel',
+	'assets_uri' => '/packages/frozennode/administrator/packages/ryanrobertsname/roxy-fileman-laravel',
 
 	/**
 	 * Authorization filters
