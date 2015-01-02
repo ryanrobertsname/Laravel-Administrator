@@ -47,6 +47,17 @@
 
             "if [ -f \"vendor/ryanrobertsname/roxy-fileman-laravel/src/config/config.php\" ] \nthen \nrm -R vendor/ryanrobertsname/roxy-fileman-laravel/src/config/config.php \nfi ",
             "if [ -f \"overrides/packages/ryanrobertsname/roxy-fileman-laravel/config.php\" ] \nthen \ncp overrides/packages/ryanrobertsname/roxy-fileman-laravel/config.php vendor/ryanrobertsname/roxy-fileman-laravel/src/config/config.php  \nfi"
+        ],
+        "post-install-cmd": [
+            "if [ -d \"public/js/ckeditor/\" ] \nthen \nrm -R public/js/ckeditor/ \nfi ",
+            "if [ -d \"vendor/ckeditor/ckeditor/\" ] \nthen \nmv vendor/ckeditor/ckeditor/ public/js/  \nfi",
+            "if [ -d \"vendor/ckeditor/\" ] \nthen \nrm -R vendor/ckeditor/ \nfi",
+
+            "if [ -f \"public/js/ckeditor/config.js\" ] \nthen \nrm -R public/js/ckeditor/config.js \nfi ",
+            "if [ -f \"overrides/packages/ckeditor/ckeditor/config.js\" ] \nthen \ncp overrides/packages/ckeditor/ckeditor/config.js public/js/ckeditor/config.js  \nfi",
+
+            "if [ -f \"vendor/ryanrobertsname/roxy-fileman-laravel/src/config/config.php\" ] \nthen \nrm -R vendor/ryanrobertsname/roxy-fileman-laravel/src/config/config.php \nfi ",
+            "if [ -f \"overrides/packages/ryanrobertsname/roxy-fileman-laravel/config.php\" ] \nthen \ncp overrides/packages/ryanrobertsname/roxy-fileman-laravel/config.php vendor/ryanrobertsname/roxy-fileman-laravel/src/config/config.php  \nfi"
         ]
     },
     "minimum-stability": "stable"
