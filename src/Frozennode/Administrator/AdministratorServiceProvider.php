@@ -117,6 +117,9 @@ class AdministratorServiceProvider extends ServiceProvider {
 		{
 			return new Menu($app->make('config'), $app->make('admin_config_factory'));
 		});
+
+		//register roxy fileman service provider
+		$this->app->register('Ryanrobertsname\RoxyFilemanLaravel\RoxyFilemanLaravelServiceProvider');
 	}
 
 	/**
