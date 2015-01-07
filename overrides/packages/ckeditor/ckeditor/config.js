@@ -43,5 +43,5 @@ CKEDITOR.editorConfig = function( config ) {
     config.removeDialogTabs = 'link:upload;image:upload';
 
     //config youtube embed
-    //config.extraPlugins = 'youtube';
+    config.extraPlugins = 'youtube';
 };
