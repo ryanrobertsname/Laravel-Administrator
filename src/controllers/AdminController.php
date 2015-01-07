@@ -131,6 +131,20 @@ class AdminController extends Controller
 				$model = $config->updateModel($model, $fieldFactory, $actionFactory);
 			}
 
+			//if model has its own self validation set up, and there is a non empty message bag on the
+			//errors property, then let's return the errors and cancel the save
+			if (
+				isset($model->errors) && 
+				$model->errors instanceof \Illuminate\Support\MessageBag && 
+				!empty($model->errors->first())
+				)
+			{	
+				return Response::json(array(
+					'success' => false,
+					'errors' => $model->errors->first(),
+				));
+			}
+
 			return Response::json(array(
 				'success' => true,
 				'data' => $model->toArray(),
