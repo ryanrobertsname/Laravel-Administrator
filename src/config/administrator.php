@@ -61,7 +61,12 @@ return array(
 	 */
 	'permission'=> function()
 	{
-		return Auth::check();
+		//no permission check by default:
+		return true;
+		
+		//if for example you are using laravel's authentication, you can check
+		//if user is authenticated like this:
+		//return Auth::check();
 	},
 
 	/**
